@@ -4,9 +4,10 @@ import 'package:flutter_fitness_application/home/home.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Welcome1 extends StatelessWidget {
-  const Welcome1({super.key, required this.name});
+  const Welcome1({super.key, required this.firstName, required this.lastName});
 
-  final String name;
+  final String firstName;
+  final String lastName;
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +33,7 @@ class Welcome1 extends StatelessWidget {
                     // width: 49,
 
                     child: Text(
-                      'Welcome, $name',
+                      'Welcome, $firstName',
                       style: GoogleFonts.poppins(
                         color: const Color(0xFF1D1517),
                         fontSize: 24,
