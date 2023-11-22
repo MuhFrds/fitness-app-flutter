@@ -1,11 +1,8 @@
-// ignore_for_file: avoid_unnecessary_containers
-
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_fitness_application/register/login.dart';
 
 import 'package:google_fonts/google_fonts.dart';
-// import 'package:flutter_fitness_application/register/welcome.dart';
 
 class MyCraousel extends StatefulWidget {
   const MyCraousel({super.key});
