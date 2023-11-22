@@ -40,29 +40,6 @@ class Onboard4 extends StatelessWidget {
                       // height: 0.06,
                     ),
                   ),
-
-                  // SizedBox(
-                  //   height: 35,
-                  //   width: 315,
-                  //   child: Text(
-                  //     'Improve Sleep \nQuality',
-                  //     style: GoogleFonts.poppins(
-                  //       color: const Color(0xFF1D1517),
-                  //       fontSize: 24,
-                  //       fontWeight: FontWeight.w700,
-                  //       height: 0.06,
-                  //     ),
-                  //   ),
-                  // ),
-                  // Text(
-                  //   ' Quality',
-                  //   style: GoogleFonts.poppins(
-                  //     color: const Color(0xFF1D1517),
-                  //     fontSize: 24,
-                  //     fontWeight: FontWeight.w700,
-                  //     height: 0.06,
-                  //   ),
-                  // ),
                   SizedBox(
                     width: 315,
                     height: 80,

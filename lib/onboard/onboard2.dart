@@ -13,7 +13,7 @@ class Onboard2 extends StatelessWidget {
           Navigator.push(context,
               MaterialPageRoute(builder: (context) => const Onboard3()));
         },
-        child: Icon(Icons.arrow_forward_ios),
+        child: const Icon(Icons.arrow_forward_ios),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -34,7 +34,7 @@ class Onboard2 extends StatelessWidget {
                       child: Text(
                         'Get Burn',
                         style: GoogleFonts.poppins(
-                          color: Color(0xFF1D1517),
+                          color: const Color(0xFF1D1517),
                           fontSize: 24,
                           fontWeight: FontWeight.w700,
                           height: 0.06,
@@ -46,7 +46,7 @@ class Onboard2 extends StatelessWidget {
                       child: Text(
                         'Let\'s keep burning, to achive yours goals, it hurts only temporarily, if you give up now you will be in pain forever',
                         style: GoogleFonts.poppins(
-                          color: Color(0xFFB6B4C1),
+                          color: const Color(0xFFB6B4C1),
                           fontSize: 14,
                           fontWeight: FontWeight.w400,
                         ),
