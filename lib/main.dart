@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_fitness_application/home/home.dart';
 import 'package:flutter_fitness_application/register/form_name.dart';
-import 'package:flutter_fitness_application/startscreen/welcome_screen.dart';
+import 'package:flutter_fitness_application/startscreen/startscreen.dart';
 
 void main() {
   runApp(const MainApp());

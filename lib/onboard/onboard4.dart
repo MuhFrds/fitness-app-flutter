@@ -10,8 +10,8 @@ class Onboard4 extends StatelessWidget {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Navigator.push(context,
-              MaterialPageRoute(builder: (context) => const MyCraousel()));
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => MyCraousel()));
         },
         child: const Icon(Icons.arrow_forward_ios),
       ),

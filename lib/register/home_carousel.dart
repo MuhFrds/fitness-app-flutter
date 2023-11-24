@@ -4,19 +4,15 @@ import 'package:flutter_fitness_application/register/login.dart';
 
 import 'package:google_fonts/google_fonts.dart';
 
-class MyCraousel extends StatefulWidget {
-  const MyCraousel({super.key});
+class MyCraousel extends StatelessWidget {
+  MyCraousel({super.key});
 
-  @override
-  State<MyCraousel> createState() => _MyCraouselState();
-}
-
-class _MyCraouselState extends State<MyCraousel> {
   final List<String> imgList = [
     'asset/img/card_goals1.png',
     'asset/img/card_goals2.png',
     'asset/img/card_goals3.png',
   ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
