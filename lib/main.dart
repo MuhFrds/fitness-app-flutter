@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_fitness_application/welcome%20screen/welcome_screen.dart';
+import 'package:flutter_fitness_application/home/home.dart';
+import 'package:flutter_fitness_application/register/form_name.dart';
+import 'package:flutter_fitness_application/startscreen/welcome_screen.dart';
 
 void main() {
   runApp(const MainApp());
@@ -11,7 +13,9 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: WelcomeScreen(),
+      // home: StartScreen(),
+      // home: FormName(),
+      home: MainHomeScreen(),
     );
   }
 }

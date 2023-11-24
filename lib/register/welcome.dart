@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_fitness_application/home/home.dart';
+import 'package:flutter_fitness_application/register/form_name.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Welcome1 extends StatelessWidget {
@@ -68,7 +69,7 @@ class Welcome1 extends StatelessWidget {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const MenuHome()));
+                            builder: (context) => const FormName()));
                   },
                   style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xFFCC8FED),

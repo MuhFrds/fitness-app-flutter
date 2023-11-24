@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_fitness_application/onboard/onboard.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class WelcomeScreen extends StatelessWidget {
-  const WelcomeScreen({super.key});
+class StartScreen extends StatelessWidget {
+  const StartScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
