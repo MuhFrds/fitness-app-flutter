@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_fitness_application/home/home.dart';
+import 'package:flutter_fitness_application/home/test.dart';
 import 'package:flutter_fitness_application/register/form_name.dart';
 import 'package:flutter_fitness_application/startscreen/startscreen.dart';
 
@@ -16,6 +17,7 @@ class MainApp extends StatelessWidget {
       // home: StartScreen(),
       // home: FormName(),
       home: MainHomeScreen(),
+      // home: TestAja(),
     );
   }
 }

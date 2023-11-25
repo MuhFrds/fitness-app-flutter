@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_fitness_application/home/saran_harian.dart';
+import 'package:flutter_fitness_application/home/today_target.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class MainHomeScreen extends StatefulWidget {
@@ -88,29 +89,30 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                     )
                   ],
                 ),
-                child: Row(
+                child: const Row(
                   // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     SaranHarian(),
                   ],
                 ),
               ),
-              Opacity(
-                opacity: 0.20,
-                child: Container(
-                  width: 315,
-                  height: 139,
-                  decoration: ShapeDecoration(
-                    gradient: const LinearGradient(
-                      begin: Alignment(-1.00, 0.08),
-                      end: Alignment(1, -0.08),
-                      colors: [Color(0xFFC050F6), Color(0xFFEEA4CE)],
-                    ),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(22),
-                    ),
+              Container(
+                width: 315,
+                height: 139,
+                decoration: ShapeDecoration(
+                  gradient: const LinearGradient(
+                    begin: Alignment(-1.00, 0.08),
+                    end: Alignment(1, -0.08),
+                    colors: [
+                      Color(0xFFC050F6),
+                      Color(0xFFEEA4CE),
+                    ],
+                  ),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(22),
                   ),
                 ),
+                child: TodayTarget(),
               ),
               Padding(
                 padding:
@@ -138,14 +140,23 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                 ),
               ),
               Container(
-                  width: 315,
-                  height: 80,
-                  decoration: ShapeDecoration(
-                    color: Colors.red,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(16),
-                    ),
-                  )),
+                width: 315,
+                height: 80,
+                decoration: ShapeDecoration(
+                  color: Colors.white,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                  shadows: const [
+                    BoxShadow(
+                      color: Color(0x111D1617),
+                      blurRadius: 40,
+                      offset: Offset(0, 10),
+                      spreadRadius: 0,
+                    )
+                  ],
+                ),
+              ),
               Container(
                   margin: const EdgeInsets.only(top: 15),
                   width: 315,
