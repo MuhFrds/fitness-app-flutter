@@ -11,12 +11,9 @@ class SaranHarian extends StatefulWidget {
 
 class _SaranHarianState extends State<SaranHarian> {
   List<String> saranList = [
-    'Saran 1',
-    'Saran 2',
-    'Saran 3',
-    'Saran 4',
-    'Saran 5',
-    'Saran 6',
+    'Push up 15x',
+    'Sit up 15x',
+    'Back up 15x',
   ];
 
   String randomSaran = '';
@@ -30,6 +27,7 @@ class _SaranHarianState extends State<SaranHarian> {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Padding(
           padding: const EdgeInsets.only(top: 26, left: 20, right: 20),
@@ -65,12 +63,8 @@ class _SaranHarianState extends State<SaranHarian> {
             ],
           ),
         ),
-        const Padding(padding: EdgeInsets.only(left: 60)),
-        Image.asset(
-          'asset/img/piechart.png',
-          width: 80, // Adjust the width as needed
-          height: 80, // Adjust the height as needed
-        ),
+        const Padding(padding: EdgeInsets.only(left: 15)),
+        Image.asset('asset/img/bannerpie.png', width: 150, height: 150),
       ],
     );
   }

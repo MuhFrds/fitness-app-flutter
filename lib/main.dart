@@ -16,8 +16,8 @@ class MainApp extends StatelessWidget {
     return const MaterialApp(
       // home: StartScreen(),
       // home: FormName(),
-      home: MainHomeScreen(),
-      // home: TestAja(),
+      // home: MainHomeScreen(),
+      home: TestAja(),
     );
   }
 }

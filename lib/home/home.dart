@@ -75,7 +75,10 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                   gradient: const LinearGradient(
                     begin: Alignment(-1.00, 0.08),
                     end: Alignment(1, -0.08),
-                    colors: [Color(0xFF00FF66), Color(0xFF00EFFF)],
+                    colors: [
+                      Color(0xFFC050F6),
+                      Color(0xFFEEA4CE),
+                    ],
                   ),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(22),
@@ -90,7 +93,6 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                   ],
                 ),
                 child: const Row(
-                  // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     SaranHarian(),
                   ],
@@ -104,15 +106,15 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                     begin: Alignment(-1.00, 0.08),
                     end: Alignment(1, -0.08),
                     colors: [
-                      Color(0xFFC050F6),
                       Color(0xFFEEA4CE),
+                      Color(0xFFC050F6),
                     ],
                   ),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(22),
                   ),
                 ),
-                child: TodayTarget(),
+                child: const TodayTarget(),
               ),
               Padding(
                 padding:
