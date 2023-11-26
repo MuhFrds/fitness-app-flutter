@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class TestAja extends StatefulWidget {
-  const TestAja({super.key});
+  const TestAja({Key? key}) : super(key: key);
 
   @override
   State<TestAja> createState() => _TestAjaState();
@@ -18,41 +18,59 @@ class _TestAjaState extends State<TestAja> {
             children: [
               Container(
                 width: 315,
-                height: 139,
+                height: 80,
                 decoration: ShapeDecoration(
-                  gradient: const LinearGradient(
-                    begin: Alignment(-1.00, 0.08),
-                    end: Alignment(1, -0.08),
-                    colors: [
-                      Color(0xFFEEA4CE),
-                      Color(0xFFC050F6),
-                    ],
-                  ),
+                  color: Colors.red,
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(22),
+                    borderRadius: BorderRadius.circular(16),
                   ),
+                  shadows: const [
+                    BoxShadow(
+                      color: Color(0x111D1617),
+                      blurRadius: 40,
+                      offset: Offset(0, 10),
+                      spreadRadius: 0,
+                    )
+                  ],
                 ),
-                // child: const TodayTarget(),
-                child: Padding(
-                  padding: EdgeInsets.only(
-                      top: 22, left: 20, right: 150, bottom: 96),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Column(
+                child: Row(
+                  children: [
+                    Container(
+                      width: 80,
+                      height: 80,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(16),
+                        image: const DecorationImage(
+                          image: AssetImage('asset/img/bannerpie.png'),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 10),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            'Today Target',
-                            style: GoogleFonts.poppins(
-                                color: Colors.black,
-                                fontSize: 14,
-                                fontWeight: FontWeight.w600),
+                            'Text Atas',
+                            style: GoogleFonts.openSans(
+                              color: Colors.white,
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          Text(
+                            'Text Bawah',
+                            style: GoogleFonts.openSans(
+                              color: Colors.white,
+                              fontSize: 14,
+                            ),
                           ),
                         ],
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ),
             ],

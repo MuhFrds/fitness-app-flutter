@@ -4,7 +4,10 @@ import 'package:flutter_fitness_application/home/today_target.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class MainHomeScreen extends StatefulWidget {
-  const MainHomeScreen({super.key});
+  const MainHomeScreen(
+      {super.key, required this.namaDepan, required this.namaBelakang});
+  final String namaDepan;
+  final String namaBelakang;
 
   @override
   State<MainHomeScreen> createState() => _MainHomeScreenState();
@@ -36,7 +39,7 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                             ),
                           ),
                           Text(
-                            'Uzumaki Madara',
+                            '${widget.namaDepan} ${widget.namaBelakang}',
                             style: GoogleFonts.poppins(
                               color: const Color(0xFF1D1517),
                               fontSize: 20,
@@ -142,6 +145,7 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                 ),
               ),
               Container(
+                margin: const EdgeInsets.only(top: 15),
                 width: 315,
                 height: 80,
                 decoration: ShapeDecoration(
@@ -158,17 +162,100 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                     )
                   ],
                 ),
+                child: Row(children: [
+                  Container(
+                    width: 50,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(16),
+                      image: const DecorationImage(
+                        image: AssetImage('asset/img/drink.png'),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Drinking 300ml Water',
+                          style: GoogleFonts.openSans(
+                            color: Colors.black,
+                            fontSize: 12,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text(
+                          'About 3 minutes ago',
+                          style: GoogleFonts.openSans(
+                            color: const Color(0xFFA3A8AC),
+                            fontSize: 10,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ]),
               ),
               Container(
-                  margin: const EdgeInsets.only(top: 15),
-                  width: 315,
-                  height: 80,
-                  decoration: ShapeDecoration(
-                    color: Colors.red,
-                    shape: RoundedRectangleBorder(
+                margin: const EdgeInsets.only(top: 15),
+                width: 315,
+                height: 80,
+                decoration: ShapeDecoration(
+                  color: Colors.white,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                  shadows: const [
+                    BoxShadow(
+                      color: Color(0x111D1617),
+                      blurRadius: 40,
+                      offset: Offset(0, 10),
+                      spreadRadius: 0,
+                    )
+                  ],
+                ),
+                child: Row(children: [
+                  Container(
+                    width: 50,
+                    height: 50,
+                    decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(16),
+                      image: const DecorationImage(
+                        image: AssetImage('asset/img/eatsnack.png'),
+                        fit: BoxFit.cover,
+                      ),
                     ),
-                  ))
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Eat Snack (Fitbar)',
+                          style: GoogleFonts.openSans(
+                            color: Colors.black,
+                            fontSize: 12,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text(
+                          'About 10 minutes ago',
+                          style: GoogleFonts.openSans(
+                            color: const Color(0xFFA3A8AC),
+                            fontSize: 10,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ]),
+              )
             ],
           ),
         ),

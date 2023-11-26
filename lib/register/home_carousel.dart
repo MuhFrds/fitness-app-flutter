@@ -1,6 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_fitness_application/register/login.dart';
+import 'package:flutter_fitness_application/register/form_name.dart';
 
 import 'package:google_fonts/google_fonts.dart';
 
@@ -93,7 +93,7 @@ class MyCraousel extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const LoginPage()));
+                    MaterialPageRoute(builder: (context) => const FormName()));
               },
               style: ElevatedButton.styleFrom(
                   backgroundColor: const Color(0xFFCC8FED),

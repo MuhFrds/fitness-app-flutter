@@ -26,9 +26,9 @@ class _LoginPageState extends State<LoginPage> {
                   labelText: 'Your First Name',
                 ),
                 onChanged: (String value) {
-                  // setState(() {
-                  //   _firstName = value;
-                  // });
+                  setState(() {
+                    _firstName = value;
+                  });
                 },
               ),
             ),
@@ -40,9 +40,9 @@ class _LoginPageState extends State<LoginPage> {
                   labelText: 'Your Last Name',
                 ),
                 onChanged: (String value) {
-                  // setState(() {
-                  //   _lastName = value;
-                  // });
+                  setState(() {
+                    _lastName = value;
+                  });
                 },
               ),
             ),

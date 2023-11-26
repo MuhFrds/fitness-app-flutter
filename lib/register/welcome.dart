@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_fitness_application/home/home.dart';
-import 'package:flutter_fitness_application/register/form_name.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Welcome1 extends StatelessWidget {
@@ -30,9 +29,6 @@ class Welcome1 extends StatelessWidget {
                 child: Column(
                   children: [
                     SizedBox(
-                      // height: 5,
-                      // width: 49,
-
                       child: Text(
                         'Welcome, $firstName',
                         style: GoogleFonts.poppins(
@@ -67,9 +63,14 @@ class Welcome1 extends StatelessWidget {
                 ElevatedButton(
                   onPressed: () {
                     Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const FormName()));
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => MainHomeScreen(
+                          namaDepan: firstName,
+                          namaBelakang: lastName,
+                        ),
+                      ),
+                    );
                   },
                   style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xFFCC8FED),
