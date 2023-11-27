@@ -23,7 +23,7 @@ class _FormNameState extends State<FormName> {
           child: Container(
             margin: const EdgeInsets.all(20),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center, // Center the content
+              mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 const Text(
                   'Hey there,',
@@ -51,14 +51,17 @@ class _FormNameState extends State<FormName> {
                   height: 80,
                   child: TextField(
                     controller: firstNameController,
+                    maxLength: 10,
                     decoration: InputDecoration(
-                        fillColor: Colors.grey[200],
-                        filled: true,
-                        prefixIcon: const Icon(Icons.person),
-                        labelText: 'First Name',
-                        hintText: 'Enter your first name',
-                        border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10))),
+                      fillColor: Colors.grey[200],
+                      filled: true,
+                      prefixIcon: const Icon(Icons.person),
+                      labelText: 'First Name',
+                      hintText: 'Enter your first name',
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                    ),
                     onChanged: (value) {
                       setState(() {
                         _firstName = value;
@@ -70,14 +73,17 @@ class _FormNameState extends State<FormName> {
                   height: 100,
                   child: TextField(
                     controller: lastNameController,
+                    maxLength: 10,
                     decoration: InputDecoration(
-                        fillColor: Colors.grey[200],
-                        filled: true,
-                        prefixIcon: const Icon(Icons.person),
-                        labelText: 'Last Name',
-                        hintText: 'Enter your last name',
-                        border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10))),
+                      fillColor: Colors.grey[200],
+                      filled: true,
+                      prefixIcon: const Icon(Icons.person),
+                      labelText: 'Last Name',
+                      hintText: 'Enter your last name',
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                    ),
                     onChanged: (value) {
                       setState(() {
                         _lastName = value;
@@ -101,11 +107,13 @@ class _FormNameState extends State<FormName> {
                     );
                   },
                   style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xFFCC8FED),
-                      foregroundColor: Colors.white,
-                      minimumSize: const Size(315, 60),
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(99))),
+                    backgroundColor: const Color(0xFFCC8FED),
+                    foregroundColor: Colors.white,
+                    minimumSize: const Size(315, 60),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(99),
+                    ),
+                  ),
                   child: const Text('Confirm'),
                 )
               ],
