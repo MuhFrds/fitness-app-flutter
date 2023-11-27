@@ -1,11 +1,10 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_fitness_application/register/form_name.dart';
-
 import 'package:google_fonts/google_fonts.dart';
 
-class MyCraousel extends StatelessWidget {
-  MyCraousel({super.key});
+class MyCarousel extends StatelessWidget {
+  MyCarousel({super.key});
 
   final List<String> imgList = [
     'asset/img/card_goals1.png',
@@ -30,7 +29,6 @@ class MyCraousel extends StatelessWidget {
                         fontSize: 20,
                         color: Colors.black,
                         fontWeight: FontWeight.w700,
-                        // height: 0.07,
                       )),
                 ),
               ],
@@ -43,64 +41,66 @@ class MyCraousel extends StatelessWidget {
                 style: TextStyle(
                   color: Color(0xFF7B6F72),
                   fontSize: 12,
-                  // fontFamily: 'Poppins',
                   fontWeight: FontWeight.w400,
                   height: 1,
                 ),
               ),
             ),
             Container(
-                child: CarouselSlider(
-                    options: CarouselOptions(
-                      height: 500,
-                      viewportFraction: 0.75,
-                      // viewportFraction: 1,
-                      autoPlay: true,
-                      autoPlayAnimationDuration: const Duration(seconds: 2),
-                      // aspectRatio: 2,
-                      enlargeCenterPage: true,
-                    ),
-                    items: imgList
-                        .map((item) => Container(
-                              child: Container(
-                                // margin: const EdgeInsets.all(5.0),
-                                child: ClipRRect(
-                                    borderRadius: const BorderRadius.all(
-                                        Radius.circular(5.0)),
-                                    child: Stack(
-                                      children: <Widget>[
-                                        Image.network(
-                                          item,
-                                          // fit: BoxFit.cover,
-                                          // width: 1000.0,
-                                          height: 1000,
-                                        ),
-                                        Positioned(
-                                          bottom: 0.0,
-                                          left: 0.0,
-                                          right: 0.0,
-                                          child: Container(
-                                            padding: const EdgeInsets.symmetric(
-                                                vertical: 10.0,
-                                                horizontal: 20.0),
-                                          ),
-                                        ),
-                                      ],
-                                    )),
+              child: CarouselSlider(
+                options: CarouselOptions(
+                  height: 500,
+                  viewportFraction: 0.75,
+                  autoPlay: true,
+                  autoPlayAnimationDuration: const Duration(seconds: 2),
+                  enlargeCenterPage: true,
+                ),
+                items: imgList
+                    .map((item) => Container(
+                          child: Container(
+                            child: ClipRRect(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(5.0)),
+                              child: Stack(
+                                children: <Widget>[
+                                  Image.asset(
+                                    item,
+                                    height: 1000,
+                                  ),
+                                  Positioned(
+                                    bottom: 0.0,
+                                    left: 0.0,
+                                    right: 0.0,
+                                    child: Container(
+                                      padding: const EdgeInsets.symmetric(
+                                        vertical: 10.0,
+                                        horizontal: 20.0,
+                                      ),
+                                    ),
+                                  ),
+                                ],
                               ),
-                            ))
-                        .toList())),
+                            ),
+                          ),
+                        ))
+                    .toList(),
+              ),
+            ),
             ElevatedButton(
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const FormName()));
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const FormName()),
+                );
               },
               style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFFCC8FED),
-                  foregroundColor: Colors.white,
-                  minimumSize: const Size(315, 60),
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(99))),
+                backgroundColor: const Color(0xFFCC8FED),
+                foregroundColor: Colors.white,
+                minimumSize: const Size(315, 60),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(99),
+                ),
+              ),
               child: const Text('Confirm'),
             )
           ],

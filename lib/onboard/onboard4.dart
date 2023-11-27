@@ -11,7 +11,7 @@ class Onboard4 extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.push(
-              context, MaterialPageRoute(builder: (context) => MyCraousel()));
+              context, MaterialPageRoute(builder: (context) => MyCarousel()));
         },
         child: const Icon(Icons.arrow_forward_ios),
       ),

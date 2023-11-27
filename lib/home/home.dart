@@ -32,7 +32,7 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            'Welcoome Back,',
+                            'Welcome Back,',
                             style: GoogleFonts.poppins(
                               color: const Color(0xFFA5A3AF),
                               fontSize: 12,
