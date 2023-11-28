@@ -39,7 +39,7 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                             ),
                           ),
                           Text(
-                            '${widget.namaDepan} ${widget.namaBelakang}',
+                            '${widget.namaDepan}\n${widget.namaBelakang}',
                             style: GoogleFonts.poppins(
                               color: const Color(0xFF1D1517),
                               fontSize: 20,
